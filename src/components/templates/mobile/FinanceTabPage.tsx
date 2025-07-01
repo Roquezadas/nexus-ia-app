@@ -1,5 +1,5 @@
 // src/components/pages/mobile/FinanceTabPage.tsx
-import { FinanceWidget } from '../../organisms/financeWidget';
+import { FinanceWidget } from '../../organisms/FinanceWidget';
 
 export const FinanceTabPage = () => {
   return (
