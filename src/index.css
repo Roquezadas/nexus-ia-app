@@ -1,0 +1,9 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilo base para o corpo da aplicação */
+body {
+  @apply bg-slate-200 dark:bg-gray-900 text-slate-800 dark:text-slate-200 transition-colors duration-300;
+}
