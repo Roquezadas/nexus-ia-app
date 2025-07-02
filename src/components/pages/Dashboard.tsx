@@ -9,8 +9,9 @@ import { NewsWidget } from '../organisms/NewsWidget';
 import { ConnectionsMap } from '../organisms/ConnectionsMap';
 import { NotesWidget } from '../organisms/NotesWidget';
 import { FinanceWidget } from '../organisms/FinanceWidget';
+import { BriefingWidget } from '../organisms/BriefingWidget'; // Importa o novo widget
 
-// Componente Wrapper para adicionar estilo e animação aos itens do grid
+// Componente Wrapper para os itens do grid
 const GridItem = ({ children }: { children: React.ReactNode }) => (
   <div className="w-full h-full">
     {children}
@@ -18,7 +19,7 @@ const GridItem = ({ children }: { children: React.ReactNode }) => (
 );
 
 export const Dashboard = () => {
-  // Layout atualizado dos widgets. 'h' é a altura.
+  // Layout ajustado para acomodar o widget de clima maior
   const layout = [
     { i: 'weather', x: 0, y: 0, w: 3, h: 3 },
     { i: 'news', x: 3, y: 0, w: 3, h: 3 },
@@ -29,6 +30,9 @@ export const Dashboard = () => {
 
   return (
     <DashboardLayout>
+      {/* O BriefingWidget fica fora do grid, no topo do painel */}
+      <BriefingWidget /> 
+      
       <GridLayout
         className="layout"
         layout={layout}
